@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+
+	<h:outputLabel for="fatura1" value="Fatura 1" />
+	<h:inputText id="fatura1" value="#{clienteFinances.fatura1}" />
+
+	<h:outputLabel for="fatura2" value="Fatura 2" />
+	<h:inputText id="fatura2" value="#{clienteFinances.fatura2}" />
+
+	<h:outputLabel for="fatura3" value="Fatura 3" />
+	<h:inputText id="fatura3" value="#{clienteFinances.fatura3}" />
+
+	<h:commandButton value="Salvar" action="#{clienteFinances.save}"/>
+
+</ui:composition>

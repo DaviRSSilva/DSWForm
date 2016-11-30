@@ -1,0 +1,19 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+       
+    <h:outputLabel for="fullname" value="Nome completo" />
+	<h:inputText id="fullname" value="#{cliente.nome}"/>
+	
+	<h:outputLabel for="cpf" value="CPF" />
+	<h:inputText id="cpf" value="#{cliente.cpf}"/>
+	
+	<h:outputLabel for="tel" value="Telefone" />
+	<h:inputText id="tel" value="#{cliente.telefone}"/>
+	
+	<h:outputLabel for="email" value="E-mail" />
+	<h:inputText id="email" value="#{cliente.email}"/>
+	
+</ui:composition>

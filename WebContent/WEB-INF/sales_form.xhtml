@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+
+	<h:outputLabel for="data" value="Data" />
+	<h:inputText id="data" value="#{clienteSales.data}" />
+
+	<h:outputLabel for="produtos" value="Produtos" />
+	<h:inputText id="produtos" value="#{clienteSales.ultimos_produtos}" />
+
+	<h:outputLabel for="valor" value="Valor" />
+	<h:inputText id="valor" value="#{clienteSales.valor}" />
+	
+	<h:commandButton value="Salvar" action="#{clienteSales.save}"/>
+
+</ui:composition>

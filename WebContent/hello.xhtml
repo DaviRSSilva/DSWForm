@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+	<title>JSF 2.0 Hello World</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+</h:head>
+<h:body>
+	<h3>Form principal</h3>	
+	<ui:fragment rendered="#{param.success == true}">
+		<h:outputText styleClass="alert alert-success" value="Sucesso" />
+	</ui:fragment>
+	<ui:fragment rendered="#{param.success == false}">
+		<h:outputText styleClass="alert alert-danger" value="#{param.msg}" />
+	</ui:fragment>
+	<h:form styleClass="center-block">
+		<ui:include src="/WEB-INF/default_form.xhtml"/>
+		<ui:fragment rendered="#{user.userType eq 'FINANCES'}">
+			<ui:include src="/WEB-INF/finances_form.xhtml"/>			
+		</ui:fragment>
+		<ui:fragment rendered="#{user.userType eq 'SALES'}">
+			<ui:include src="/WEB-INF/sales_form.xhtml"/>
+		</ui:fragment>
+		<ui:fragment rendered="#{user.userType eq 'SUPPORT'}">
+			<ui:include src="/WEB-INF/support_form.xhtml"/>		
+		</ui:fragment>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+	</h:form>
+</h:body>
+</html>
